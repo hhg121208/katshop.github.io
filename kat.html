@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAT</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0}
+        html,body{
+            height:100%;
+            font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+            color:#1f2937;
+            display: flex;
+            flex-direction: column;
+        }
+        main, .center {
+            flex: 1;
+            margin-top: 62px;
+        }
+        a{
+            text-decoration:none;
+            color:inherit
+        }
+        header{
+            position: fixed;    
+            top: 0;           
+            left: 0;            
+            width: 100%;      
+            z-index: 1000;     
+            background:#0f172a; 
+            color:#fff;
+            padding:14px 24px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            height: 62px;
+        }
+        .thanhduoi {
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .brand{
+            display:flex;
+            align-items:center;
+            gap:18px
+        }
+        .brand .logo{
+            font-weight:700;
+            font-size:20px;
+            letter-spacing:0.5px
+        }
+        
+
+        .chonlua{
+            position:relative;
+            padding:8px 12px;
+            border-radius:8px
+        }
+
+        .chonlua:hover{
+            background:rgba(255,255,255,0.06);
+        }
+
+        .chonlua .keoxuong{
+            position:absolute;
+            left:0;
+            top:calc(100% + 8px);
+            background:#fff;
+            color:#0f172a;
+            border-radius:8px;
+            box-shadow:0 8px 24px rgba(2,6,23,0.25);
+            min-width:180px;
+            display:none;
+            padding:10px
+        }
+
+        .chonlua:hover .keoxuong{
+            display:block
+        }
+
+        .keoxuong a{
+            display:block;
+            padding:8px;
+            border-radius:6px
+        }
+
+        .keoxuong a:hover{
+            background:#f1f5f9
+        }
+
+        .header-actions{
+            display:flex;
+            gap:12px;
+            align-items:center
+        }
+
+        .action {
+            background:rgba(255,255,255,0.06);
+            padding:8px 10px;
+            border-radius:8px;
+            display:flex;
+            align-items:center;
+            gap:8px
+        }
+
+        footer{
+            margin-top:18px;
+            background:#0b1220;
+            color:#fff;
+            padding:18px;
+            border-radius:8px
+        }
+
+        .manhinh{
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .timkiem{
+            grid-column:1 / -1;
+            display:flex;
+            gap:12px;
+            align-items:center
+        }
+
+        .timkiem input{
+            flex:1;
+            padding:12px;
+            border-radius:10px;
+            border:1px solid #e6eef8
+        }
+
+        .timkiem button{
+            padding:12px 16px;
+            border-radius:10px;
+            border:0;
+            background:#0f172a;
+            color:#fff
+        }
+
+        .sanpham{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+            gap:14px
+        }
+
+        .sp{
+            background:#fff;
+            border-radius:12px;
+            box-shadow:0 8px 20px rgba(2,6,23,0.05);
+            transition:transform .15s
+        }
+
+        .sp:hover{
+            transform:translateY(-6px)
+        }
+
+        .sp img{
+            width:100%;
+            height:140px;
+            object-fit:cover;
+            display:block
+        }
+
+        .sp-gt{
+            padding:10px
+        }
+
+        .sp-hangxe{
+            font-weight:700;
+            font-size:15px;
+            margin-bottom:6px
+        }
+
+        .sp-dongxe{
+            font-size:13px;
+            color:#475569;
+            margin-bottom:8px
+        }
+
+        .gia{
+            font-weight:800;
+            color:#0f172a
+        }
+
+        .qc1 {
+            width: 20%;
+        }
+
+        .ndchinh {
+            width: 60%;
+        }
+
+        .qc2 {
+            width: 20%;
+        }
+        .qc1 img, .qc2 img{
+            width: 100%;
+            display: block;
+        }
+    </style>
+    
+</head>
+<body>
+        <header>
+            <div class="brand">
+                <div class="logo">KAT</div>
+                    <div class="chonlua">
+                    Danh mục
+                    <div class="keoxuong">
+                        <a >Sedan</a>
+                        <a >SUV</a>
+                        <a >Hatchback</a>
+                        <a >Crossover</a>
+                        <a >Pickup</a>
+                        <a >Coupe</a>
+                    </div>
+                    </div>
+
+                    <div class="chonlua">
+                    Hãng xe
+                    <div class="keoxuong">
+                        <a >Toyota</a>
+                        <a >VinFast</a>
+                        <a >Honda</a>
+                        <a >Hyundai</a>
+                        <a >Kia</a>
+                        <a >Ford</a>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="header-actions">
+                <div class="action">
+                    <a href="login.html" class="taikhoan">Tài khoản</a>
+                </div>
+                <div class="action">
+                    <a href="https://web.facebook.com/tran.quang.minh.14897" class="trochuyen">Trò chuyện</a>
+                </div>
+                <div class="action">Giỏ hàng</div>
+            </div>
+        </header>
+        
+    <p></p>
+    <p></p>
+    <p></p>
+    <div class="manhinh">
+        <div class="qc1">
+            <br><br><br>
+            <img src="https://kenh14cdn.com/thumb_w/640/pr/2022/cover-16433682734371296105611-1643368274734-63779064607158.jpg" alt="x">
+        </div>
+
+        <div class="ndchinh">
+            <br><br><br><br>
+                <div class="timkiem">
+                    <input placeholder="Tìm kiếm theo mẫu xe, hãng, năm...">
+                    <button>Tìm kiếm</button>
+                </div>
+                <br>
+                
+                <div class="sanpham">
+
+                    <a class="sp" >
+                        <img src="https://di-uploads-pod43.dealerinspire.com/zeiglertoyotaofracine/uploads/2023/09/2024-Camry-Hybrid.png" alt="Car 1">
+                        <div class="sp-gt">
+                            <div class="sp-hangxe">Toyota Camry 2024</div>
+                            <div class="sp-dongxe">Sedan</div>
+                            <div class="gia">1 tỷ 200 triệu</div>
+                        </div>
+                    </a>
+
+                    <a class="sp" >
+                        <img src="https://vinfastquangninh.com.vn/wp-content/uploads/2022/09/2-min.jpg" alt="Car 2">
+                        <div class="sp-gt">
+                            <div class="sp-hangxe">VinFast VF e34</div>
+                            <div class="sp-dongxe">SUV điện</div>
+                            <div class="gia">690 triệu</div>
+                        </div>
+                    </a>
+
+                    <a class="sp" >
+                        <img src="https://thanhnien.mediacdn.vn/Uploaded/chicuong/2022_03_14/honda-civic-e-1-9455.jpg" alt="Car 3">
+                        <div class="sp-gt">
+                            <div class="sp-hangxe">Honda Civic 2022</div>
+                            <div class="sp-dongxe">Hatchback</div>
+                            <div class="gia">800 triệu</div>
+                        </div>
+                    </a>
+
+                    <a class="sp" >
+                        <img src="https://hyundaigialai.vn/wp-content/uploads/2020/07/M%C3%A0u-xe-Hyundai-Accent-2021-b%C3%A0ng-be.png" alt="Car 4">
+                        <div class="sp-gt">
+                            <div class="sp-hangxe">Hyundai Accent 2021</div>
+                            <div class="sp-dongxe">Sedan</div>
+                            <div class="gia">740 triệu</div>
+                        </div>
+                    </a>
+
+                    <a class="sp" >
+                        <img src="https://static.automotor.vn/images/upload/2022/06/30/2022-kia-seltos-facelift-autonews.jpeg" alt="Car 5">
+                        <div class="sp-gt">
+                            <div class="sp-hangxe">Kia Seltos 2023</div>
+                            <div class="sp-dongxe">Crossover</div>
+                            <div class="gia">720 triệu</div>
+                        </div>
+                    </a>
+
+                    <a class="sp" >
+                        <img src="https://ford-suoitien.vn/wp-content/uploads/2021/11/an-toan_Ford_Ranger_2023.jpg" alt="Car 5">
+                        <div class="sp-gt">
+                            <div class="sp-hangxe">Ford Ranger 2025</div>
+                            <div class="sp-dongxe">Pickup</div>
+                            <div class="gia">707 triệu</div>
+                        </div>
+                    </a>
+                </div>
+        </div>
+
+        <div class="qc2">
+            <br><br><br>
+            <img src="co.jpg">
+            <br>
+            <img src="tn.jpg">
+            <br>
+            <img src="https://katinat.vn/wp-content/uploads/2024/10/451584901_473177175411148_2112742851141756862_n.jpg" alt="x">
+        </div>
+    </div>
+
+    <footer>
+        <div class="thanhduoi">
+            <div class="te">
+                <h4>KAT</h4>
+                <p>Công ty TNHH Thương mại KAT — Cung cấp xe ô tô uy tín.</p>
+                <h4>Hỗ trợ</h4>
+                <p>•Chính sách bảo hành</p>
+                <p>•Chính sách đổi trả</p>
+                <p>•Hướng dẫn mua trả góp</p>
+            </div>
+            <div class="td">
+                <h4>Liên hệ</h4>
+                <p>Gmail: hk21cqt@gmail.com</p>
+                <a href="https://web.facebook.com/tran.quang.minh.14897" target="_blank" class="hi">Facebook: Công ty TNHH KAT</a><br>
+                <a href="https://maps.app.goo.gl/HmsLqKeBJu57WETN7" target="_blank" class="hi">Địa chỉ: THPT chuyên Quang Trung, phường Đồng Xoài, tỉnh Đồng Nai</a>
+                <p>Hotline: 0862874690 - 0869060079</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
